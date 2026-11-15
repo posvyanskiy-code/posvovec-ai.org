@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>posvovec-ai</title>
+<meta name="description" content="Личный сайт для моих проектов.">
+<meta name="robots" content="noindex">
+<link rel="preload" href="onest.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face {
+  font-family: "Onest";
+  src: url("onest.woff2") format("woff2");
+  font-weight: 100 900;
+  font-display: swap;
+}
+:root {
+  color-scheme: light;
+  --bg: #E9EDF1;
+  --ink: #17202B;
+  --muted: #5B6878;
+  --line: #CDD5DE;
+  --ok: #1E9E6A;
+  --ok-text: #157A51;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --bg: #10161D;
+    --ink: #E6EBF0;
+    --muted: #93A1B2;
+    --line: #27323F;
+    --ok: #3CC48A;
+    --ok-text: #3CC48A;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #10161D;
+  --ink: #E6EBF0;
+  --muted: #93A1B2;
+  --line: #27323F;
+  --ok: #3CC48A;
+  --ok-text: #3CC48A;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body {
+  min-height: 100vh;
+  min-height: 100svh;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "Onest", system-ui, -apple-system, "Segoe UI", sans-serif;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  padding: 0 16px;
+}
+main {
+  width: 100%;
+  max-width: 36rem;
+  margin: 0 auto;
+  align-self: center;
+  padding: 64px 0;
+}
+.mark {
+  margin: 0;
+  font-size: clamp(2.6rem, 11vw, 4.6rem);
+  font-weight: 650;
+  line-height: 1;
+  letter-spacing: -0.035em;
+  overflow-wrap: anywhere;
+}
+.lead {
+  margin: 20px 0 0;
+  max-width: 28ch;
+  font-size: 1.25rem;
+  line-height: 1.45;
+  color: var(--muted);
+}
+.status {
+  margin: 40px 0 0;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.95rem;
+  color: var(--ok-text);
+  font-weight: 500;
+}
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--ok);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--ok) 20%, transparent);
+  flex: none;
+}
+footer {
+  max-width: 36rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 24px 0;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+</style>
+</head>
+<body>
+<main>
+  <h1 class="mark">posvovec-ai</h1>
+  <p class="lead">Мой сайт для моих проектов. Скоро здесь что-нибудь появится.</p>
+  <p class="status"><span class="dot" aria-hidden="true"></span>Сайт работает</p>
+</main>
+<footer>Шрифт Onest, лицензия SIL OFL.</footer>
+</body>
+</html>
